@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yam-MX-BCN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,18 +15,556 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UeU-Gs-8rY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y1F-vN-98n">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wrO-Pf-N1X">
+                                                <rect key="frame" x="69.5" y="665" width="275" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbS-O7-lre" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Ibh-Vn-t1h"/>
+                                                            <constraint firstAttribute="width" constant="50" id="Onb-Xn-nLi"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVu-BL-dLC" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="Lyh-tI-ndL"/>
+                                                            <constraint firstAttribute="height" constant="50" id="tVc-rK-RV1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLs-86-Kns" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="GqO-Xm-Qdz"/>
+                                                            <constraint firstAttribute="height" constant="50" id="iE7-dU-W1k"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csM-6d-v1h" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="2V8-HN-kfl"/>
+                                                            <constraint firstAttribute="height" constant="50" id="FBR-Kp-r4X"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="0">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="et2-Ch-wG2"/>
+                                                    <constraint firstAttribute="width" constant="275" id="ziz-iL-JgY"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="nRw-T9-Bk6">
+                                                <rect key="frame" x="69.5" y="537" width="275" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYV-cr-C59" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="EB4-ay-Lc5"/>
+                                                            <constraint firstAttribute="height" constant="50" id="c09-df-f2J"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zap-JC-dO2" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Oyd-03-d4m"/>
+                                                            <constraint firstAttribute="width" constant="50" id="nWx-Iw-0cS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuF-XQ-0VT" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="0x1-5a-i93"/>
+                                                            <constraint firstAttribute="height" constant="50" id="hcp-PX-J7I"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebZ-XZ-Pb3" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="8aT-cn-G1c"/>
+                                                            <constraint firstAttribute="width" constant="50" id="kMj-HI-Hsb"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="9"/>
+                                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" image="white Teal delete">
+                                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="small">
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                                            </preferredSymbolConfiguration>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="efA-8a-bNP"/>
+                                                    <constraint firstAttribute="width" constant="275" id="mGZ-nL-EZj"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Phz-A1-fUR">
+                                                <rect key="frame" x="69.5" y="600" width="275" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSk-Ib-7SY" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="3VJ-0Z-4Nf"/>
+                                                            <constraint firstAttribute="height" constant="50" id="8aQ-5W-RQf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJg-fE-jM3" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="75" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="DVC-7j-hRQ"/>
+                                                            <constraint firstAttribute="width" constant="50" id="bW5-DS-8Gc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKK-jz-36l" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="150" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="ARy-qp-AEj"/>
+                                                            <constraint firstAttribute="height" constant="50" id="lTi-Ol-pLS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdc-Ad-Lwr" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="225" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="QU1-iN-Z4T"/>
+                                                            <constraint firstAttribute="height" constant="50" id="pPZ-uy-kYA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="20"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="25"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWith">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Ofj-eX-83R"/>
+                                                    <constraint firstAttribute="width" constant="275" id="ejH-SJ-lai"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Mwt-de-a9i">
+                                                <rect key="frame" x="69" y="479" width="202" height="50"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4K-Og-6WC" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="jSL-be-nDZ"/>
+                                                            <constraint firstAttribute="width" constant="50" id="ofg-az-AUH"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="18"/>
+                                                        <state key="normal" title="N">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcd-VY-eZK" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="76" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="JcB-IP-JFG"/>
+                                                            <constraint firstAttribute="width" constant="50" id="QOk-mV-o69"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="fosforo teal"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSv-MO-mOQ" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                        <rect key="frame" x="152" y="0.0" width="50" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="XcW-eJ-96h"/>
+                                                            <constraint firstAttribute="width" constant="50" id="t41-fO-egq"/>
+                                                        </constraints>
+                                                        <state key="normal" image="potassio teal">
+                                                            <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="10"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yj-CK-2aD">
+                                                <rect key="frame" x="131" y="178" width="219" height="48"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="wrO-Pf-N1X" secondAttribute="bottom" constant="59" id="6NQ-Da-Cso"/>
+                                            <constraint firstItem="wrO-Pf-N1X" firstAttribute="top" secondItem="Phz-A1-fUR" secondAttribute="bottom" constant="15" id="MlN-Os-Fmk"/>
+                                            <constraint firstItem="nRw-T9-Bk6" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" id="QYQ-gB-7SE"/>
+                                            <constraint firstItem="wrO-Pf-N1X" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" id="Uv8-lj-6hQ"/>
+                                            <constraint firstItem="Phz-A1-fUR" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" id="VcW-Jn-FdM"/>
+                                            <constraint firstItem="nRw-T9-Bk6" firstAttribute="top" secondItem="Mwt-de-a9i" secondAttribute="bottom" constant="8" symbolic="YES" id="kF8-AJ-jc6"/>
+                                            <constraint firstItem="Phz-A1-fUR" firstAttribute="top" secondItem="nRw-T9-Bk6" secondAttribute="bottom" constant="13" id="mHN-Vk-7OM"/>
+                                            <constraint firstItem="Mwt-de-a9i" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" constant="-37" id="uYO-IQ-mnm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="y1F-vN-98n" firstAttribute="top" secondItem="FqJ-Z1-Rec" secondAttribute="top" id="33P-AH-8pU"/>
+                                    <constraint firstItem="y1F-vN-98n" firstAttribute="centerX" secondItem="UeU-Gs-8rY" secondAttribute="centerX" id="CSz-rt-k9n"/>
+                                    <constraint firstAttribute="bottom" secondItem="y1F-vN-98n" secondAttribute="bottom" id="FyX-Z3-YPl"/>
+                                    <constraint firstAttribute="trailing" secondItem="y1F-vN-98n" secondAttribute="trailing" id="ZHh-nc-91Y"/>
+                                    <constraint firstItem="y1F-vN-98n" firstAttribute="bottom" secondItem="FqJ-Z1-Rec" secondAttribute="bottom" id="fS8-9Z-wSk"/>
+                                    <constraint firstItem="y1F-vN-98n" firstAttribute="leading" secondItem="FqJ-Z1-Rec" secondAttribute="leading" id="uiB-6r-exO"/>
+                                    <constraint firstItem="y1F-vN-98n" firstAttribute="width" secondItem="UeU-Gs-8rY" secondAttribute="width" id="v7Y-hE-uqQ"/>
+                                    <constraint firstItem="y1F-vN-98n" firstAttribute="height" secondItem="UeU-Gs-8rY" secondAttribute="height" id="zqv-zd-42c"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aPU-rg-WOq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="FqJ-Z1-Rec"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UeU-Gs-8rY" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6Nu-HS-loX"/>
+                            <constraint firstItem="UeU-Gs-8rY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="llQ-Uv-QPu"/>
+                            <constraint firstItem="UeU-Gs-8rY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qPE-xs-pG4"/>
+                            <constraint firstItem="UeU-Gs-8rY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vRL-hZ-S43"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BmZ-uP-f2t">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="power" catalog="system" style="done" id="reS-I9-XBT">
+                            <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="84"/>
+            <point key="canvasLocation" x="-1136.231884057971" y="1579.6875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="F6B-fI-6zO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YOo-xr-WbL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K24-vK-Pte">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="gHh-dE-nJb" kind="relationship" relationship="viewControllers" id="11f-iB-Qvl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuc-AX-cQQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2103" y="-15"/>
+        </scene>
+        <!--Unit Settings View Controller-->
+        <scene sceneID="FtA-rg-dBA">
+            <objects>
+                <viewController id="qjj-61-dAA" customClass="UnitSettingsViewController" customModule="Fertilizer_Calc_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="onz-ch-iMp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0GK-R4-Mat"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yY6-S1-Tdt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4801" y="-24"/>
+        </scene>
+        <!--Fastcalc View Controller-->
+        <scene sceneID="zqn-w9-UO0">
+            <objects>
+                <viewController id="6cl-yj-V8g" customClass="FastcalcViewController" customModule="Fertilizer_Calc_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIw-mb-YQy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="I3L-00-8z1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qwm-co-KZh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUB-Wu-40c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3558" y="1542"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="3tq-qc-qxl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yam-MX-BCN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="bdo-QT-AZa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzW-xw-FBM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h0G-1s-xKA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKz-2X-2xB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226.08695652173915" y="768.75"/>
+        </scene>
+        <!--Fertilizer Calc-->
+        <scene sceneID="0n1-Ty-pzL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gHh-dE-nJb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fertilizer Calc" id="FAD-DK-zBT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PAo-LJ-3FL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6cl-yj-V8g" kind="relationship" relationship="rootViewController" id="iZ5-nE-12F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU0-4F-48P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3557.971014492754" y="768.75"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="EuF-XQ-0VT">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="MYV-cr-C59">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="UKK-jz-36l">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="ZSk-Ib-7SY">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="bbS-O7-lre">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="cLs-86-Kns">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="csM-6d-v1h">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="ebZ-XZ-Pb3">
+            <size key="intrinsicContentSize" width="512" height="512"/>
+        </designable>
+        <designable name="gJg-fE-jM3">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="mdc-Ad-Lwr">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="yVu-BL-dLC">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="zap-JC-dO2">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+    </designables>
     <resources>
+        <image name="fosforo teal" width="300" height="300"/>
+        <image name="potassio teal" width="300" height="300"/>
+        <image name="power" catalog="system" width="128" height="124"/>
+        <image name="white Teal delete" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
