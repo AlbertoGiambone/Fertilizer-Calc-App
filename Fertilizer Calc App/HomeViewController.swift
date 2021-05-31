@@ -56,8 +56,95 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
        
     }
+    
+    //MARK: Connection
+    
+    @IBOutlet weak var one: RoundButton!
+    
+    @IBOutlet weak var two: RoundButton!
+    
+    @IBOutlet weak var three: RoundButton!
+    
+    @IBOutlet weak var nLabel: UILabel!
+    
+    @IBOutlet weak var pLabel: UILabel!
+    
+    @IBOutlet weak var segment: UISegmentedControl!
+    
+    
+    
+    
+    //MARK: Action Button
+    
+    
+    @IBAction func mySegmentControl(_ sender: UISegmentedControl) {
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            segment.selectedSegmentTintColor = UIColor.systemTeal
+        case 1:
+            segment.selectedSegmentTintColor = UIColor.orange
+        case 2:
+            segment.selectedSegmentTintColor = UIColor.yellow
+        
+        default:
+            break
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
+    @IBAction func Onebutton(_ sender: RoundButton) {
+        
+        if segment.selectedSegmentIndex == 0 {
+        
+        if nLabel.text == "N Unit" {
+            nLabel.text = "1"
+        }else{
+            nLabel.text = String("\(nLabel.text!)1")
+            }
+        }
+        
+        if segment.selectedSegmentIndex == 1 {
+            if pLabel.text == "P Unit" {
+                pLabel.text = "1"
+            }else{
+                pLabel.text = String("\(pLabel.text!)1")
+            }
+        }
+        
+        
+    }
+    
+    @IBAction func twoButton(_ sender: RoundButton) {
+        
+        if segment.selectedSegmentIndex == 0 {
+            
+            if nLabel.text == "N Unit" {
+                nLabel.text = "1"
+            }else{
+                nLabel.text = String("\(nLabel.text!)2")
+            }
+        }
+        
+        if segment.selectedSegmentIndex == 1 {
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
     
     
     
