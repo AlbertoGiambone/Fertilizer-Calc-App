@@ -19,6 +19,8 @@
 		A05F6EAE26259CE900AF46FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A05F6EAD26259CE900AF46FA /* GoogleService-Info.plist */; };
 		A06F57F32662267D0003CB4A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F57F22662267D0003CB4A /* RoundButton.swift */; };
 		A06F57F526623D630003CB4A /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F57F426623D630003CB4A /* RoundTextField.swift */; };
+		A0FB68FD266535A2002E9EE4 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB68FC266535A2002E9EE4 /* RoundLabel.swift */; };
+		A0FB68FF2665439B002E9EE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		A05F6EAD26259CE900AF46FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A06F57F22662267D0003CB4A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A06F57F426623D630003CB4A /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		A0FB68FC266535A2002E9EE4 /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
+		A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E5034A6F29BF3C0CF465D747 /* Pods_Fertilizer_Calc_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fertilizer_Calc_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +99,7 @@
 				A05F6E9626259B3900AF46FA /* AppDelegate.swift */,
 				A05F6E9826259B3900AF46FA /* SceneDelegate.swift */,
 				A05F6E9C26259B3900AF46FA /* Main.storyboard */,
+				A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */,
 				A01165672625F4C000F6F2E3 /* UnitSettingsViewController.swift */,
 				A01165642625F41F00F6F2E3 /* FastcalcViewController.swift */,
 				A011655F2625D42B00F6F2E3 /* HomeViewController.swift */,
@@ -110,6 +115,7 @@
 		A06F57F626623D6C0003CB4A /* Services Files */ = {
 			isa = PBXGroup;
 			children = (
+				A0FB68FC266535A2002E9EE4 /* RoundLabel.swift */,
 				A06F57F22662267D0003CB4A /* RoundButton.swift */,
 				A06F57F426623D630003CB4A /* RoundTextField.swift */,
 			);
@@ -252,10 +258,12 @@
 				A06F57F32662267D0003CB4A /* RoundButton.swift in Sources */,
 				A05F6E9726259B3900AF46FA /* AppDelegate.swift in Sources */,
 				A01165682625F4C000F6F2E3 /* UnitSettingsViewController.swift in Sources */,
+				A0FB68FD266535A2002E9EE4 /* RoundLabel.swift in Sources */,
 				A06F57F526623D630003CB4A /* RoundTextField.swift in Sources */,
 				A05F6E9926259B3900AF46FA /* SceneDelegate.swift in Sources */,
 				A01165602625D42B00F6F2E3 /* HomeViewController.swift in Sources */,
 				A01165652625F41F00F6F2E3 /* FastcalcViewController.swift in Sources */,
+				A0FB68FF2665439B002E9EE4 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
