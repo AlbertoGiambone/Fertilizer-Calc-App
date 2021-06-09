@@ -10,7 +10,6 @@
 		1D1A5CDDA74C456B17508373 /* Pods_Fertilizer_Calc_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5034A6F29BF3C0CF465D747 /* Pods_Fertilizer_Calc_App.framework */; };
 		A01165602625D42B00F6F2E3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011655F2625D42B00F6F2E3 /* HomeViewController.swift */; };
 		A01165652625F41F00F6F2E3 /* FastcalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01165642625F41F00F6F2E3 /* FastcalcViewController.swift */; };
-		A01165682625F4C000F6F2E3 /* UnitSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01165672625F4C000F6F2E3 /* UnitSettingsViewController.swift */; };
 		A05F6E9726259B3900AF46FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05F6E9626259B3900AF46FA /* AppDelegate.swift */; };
 		A05F6E9926259B3900AF46FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05F6E9826259B3900AF46FA /* SceneDelegate.swift */; };
 		A05F6E9E26259B3900AF46FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A05F6E9C26259B3900AF46FA /* Main.storyboard */; };
@@ -19,8 +18,10 @@
 		A05F6EAE26259CE900AF46FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A05F6EAD26259CE900AF46FA /* GoogleService-Info.plist */; };
 		A06F57F32662267D0003CB4A /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F57F22662267D0003CB4A /* RoundButton.swift */; };
 		A06F57F526623D630003CB4A /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06F57F426623D630003CB4A /* RoundTextField.swift */; };
+		A0B98AE8267157560091BE46 /* SETareaORweightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B98AE7267157560091BE46 /* SETareaORweightViewController.swift */; };
 		A0FB68FD266535A2002E9EE4 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB68FC266535A2002E9EE4 /* RoundLabel.swift */; };
 		A0FB68FF2665439B002E9EE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */; };
+		A0FB6901266A5931002E9EE4 /* UnitArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB6900266A5931002E9EE4 /* UnitArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +30,6 @@
 		A011655F2625D42B00F6F2E3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A01165622625EAF100F6F2E3 /* Fertilizer Calc App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fertilizer Calc App.entitlements"; sourceTree = "<group>"; };
 		A01165642625F41F00F6F2E3 /* FastcalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastcalcViewController.swift; sourceTree = "<group>"; };
-		A01165672625F4C000F6F2E3 /* UnitSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitSettingsViewController.swift; sourceTree = "<group>"; };
 		A05F6E9326259B3900AF46FA /* Fertilizer Calc App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fertilizer Calc App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05F6E9626259B3900AF46FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A05F6E9826259B3900AF46FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,8 +40,10 @@
 		A05F6EAD26259CE900AF46FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A06F57F22662267D0003CB4A /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A06F57F426623D630003CB4A /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		A0B98AE7267157560091BE46 /* SETareaORweightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SETareaORweightViewController.swift; sourceTree = "<group>"; };
 		A0FB68FC266535A2002E9EE4 /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
 		A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A0FB6900266A5931002E9EE4 /* UnitArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitArray.swift; sourceTree = "<group>"; };
 		E5034A6F29BF3C0CF465D747 /* Pods_Fertilizer_Calc_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fertilizer_Calc_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -99,8 +101,8 @@
 				A05F6E9626259B3900AF46FA /* AppDelegate.swift */,
 				A05F6E9826259B3900AF46FA /* SceneDelegate.swift */,
 				A05F6E9C26259B3900AF46FA /* Main.storyboard */,
+				A0B98AE7267157560091BE46 /* SETareaORweightViewController.swift */,
 				A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */,
-				A01165672625F4C000F6F2E3 /* UnitSettingsViewController.swift */,
 				A01165642625F41F00F6F2E3 /* FastcalcViewController.swift */,
 				A011655F2625D42B00F6F2E3 /* HomeViewController.swift */,
 				A05F6E9F26259B3A00AF46FA /* Assets.xcassets */,
@@ -115,6 +117,7 @@
 		A06F57F626623D6C0003CB4A /* Services Files */ = {
 			isa = PBXGroup;
 			children = (
+				A0FB6900266A5931002E9EE4 /* UnitArray.swift */,
 				A0FB68FC266535A2002E9EE4 /* RoundLabel.swift */,
 				A06F57F22662267D0003CB4A /* RoundButton.swift */,
 				A06F57F426623D630003CB4A /* RoundTextField.swift */,
@@ -257,13 +260,14 @@
 			files = (
 				A06F57F32662267D0003CB4A /* RoundButton.swift in Sources */,
 				A05F6E9726259B3900AF46FA /* AppDelegate.swift in Sources */,
-				A01165682625F4C000F6F2E3 /* UnitSettingsViewController.swift in Sources */,
+				A0B98AE8267157560091BE46 /* SETareaORweightViewController.swift in Sources */,
 				A0FB68FD266535A2002E9EE4 /* RoundLabel.swift in Sources */,
 				A06F57F526623D630003CB4A /* RoundTextField.swift in Sources */,
 				A05F6E9926259B3900AF46FA /* SceneDelegate.swift in Sources */,
 				A01165602625D42B00F6F2E3 /* HomeViewController.swift in Sources */,
 				A01165652625F41F00F6F2E3 /* FastcalcViewController.swift in Sources */,
 				A0FB68FF2665439B002E9EE4 /* SettingsViewController.swift in Sources */,
+				A0FB6901266A5931002E9EE4 /* UnitArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

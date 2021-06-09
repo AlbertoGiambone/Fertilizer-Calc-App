@@ -8,6 +8,44 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--TareaO Rweight View Controller-->
+        <scene sceneID="PaL-4K-pFU">
+            <objects>
+                <viewController id="OxL-e2-Wpx" customClass="SETareaORweightViewController" customModule="Fertilizer_Calc_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTb-3q-aXV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jwS-sJ-CuY">
+                                <rect key="frame" x="20" y="146" width="374" height="716"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="5PD-Nj-WE0">
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5PD-Nj-WE0" id="aJ4-Dt-mYp">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cqa-NQ-plm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jwS-sJ-CuY" firstAttribute="top" secondItem="Cqa-NQ-plm" secondAttribute="top" constant="58" id="5In-7T-ikC"/>
+                            <constraint firstItem="jwS-sJ-CuY" firstAttribute="bottom" secondItem="Cqa-NQ-plm" secondAttribute="bottom" id="9mf-Be-IqG"/>
+                            <constraint firstItem="jwS-sJ-CuY" firstAttribute="leading" secondItem="Cqa-NQ-plm" secondAttribute="leading" constant="20" id="pxM-gT-K0H"/>
+                            <constraint firstItem="Cqa-NQ-plm" firstAttribute="trailing" secondItem="jwS-sJ-CuY" secondAttribute="trailing" constant="20" id="zXt-0k-dgw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uIW-vj-Zcb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vNl-86-ZCv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3042.0289855072465" y="1579.6875"/>
+        </scene>
         <!--Settings View Controller-->
         <scene sceneID="hi8-go-cpG">
             <objects>
@@ -16,7 +54,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huc-DG-6i9" customClass="RoundLabel" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="huc-DG-6i9" customClass="RoundLabel" customModule="Fertilizer_Calc_App" customModuleProvider="target">
                                 <rect key="frame" x="20" y="147" width="374" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -31,46 +69,53 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4Q-BL-ahG">
-                                <rect key="frame" x="20" y="170" width="374" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwE-cn-NBQ">
+                                <rect key="frame" x="30" y="157" width="355" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="OGt-zP-xbL"/>
+                                    <constraint firstAttribute="height" constant="45" id="kgV-NN-aYt"/>
                                 </constraints>
-                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FdJ-sW-VOr">
-                                <rect key="frame" x="20" y="210" width="374" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="19"/>
+                                <state key="normal" title="Area">
+                                    <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="areaTapped:" destination="S5D-C9-ef2" eventType="touchUpInside" id="D9X-Uu-MR3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qv-E6-GnP">
+                                <rect key="frame" x="30" y="220" width="355" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="mo6-le-w7R"/>
+                                    <constraint firstAttribute="height" constant="45" id="Nus-ae-L9X"/>
                                 </constraints>
-                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="19"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" name="Galvji" family="Galvji" pointSize="19"/>
+                                <state key="normal" title="Weight">
+                                    <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="weightTapped:" destination="S5D-C9-ef2" eventType="touchUpInside" id="Xwv-0h-jMI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9vG-T7-AT8"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="FdJ-sW-VOr" firstAttribute="leading" secondItem="9vG-T7-AT8" secondAttribute="leading" constant="20" id="0qY-TV-2ya"/>
+                            <constraint firstItem="NwE-cn-NBQ" firstAttribute="leading" secondItem="huc-DG-6i9" secondAttribute="trailing" constant="-364" id="2uH-ya-oIj"/>
                             <constraint firstItem="9vG-T7-AT8" firstAttribute="trailing" secondItem="huc-DG-6i9" secondAttribute="trailing" constant="20" id="7bv-4I-beQ"/>
                             <constraint firstItem="huc-DG-6i9" firstAttribute="top" secondItem="9vG-T7-AT8" secondAttribute="top" constant="59" id="Ed3-wb-gfW"/>
-                            <constraint firstItem="9vG-T7-AT8" firstAttribute="trailing" secondItem="w4Q-BL-ahG" secondAttribute="trailing" constant="20" id="HFn-H5-m4H"/>
-                            <constraint firstItem="w4Q-BL-ahG" firstAttribute="leading" secondItem="9vG-T7-AT8" secondAttribute="leading" constant="20" id="b5D-gy-MVf"/>
-                            <constraint firstItem="9vG-T7-AT8" firstAttribute="trailing" secondItem="FdJ-sW-VOr" secondAttribute="trailing" constant="20" id="dug-Qr-B4g"/>
-                            <constraint firstItem="huc-DG-6i9" firstAttribute="top" secondItem="w4Q-BL-ahG" secondAttribute="bottom" constant="-63" id="f8E-0J-6Lk"/>
+                            <constraint firstItem="8Qv-E6-GnP" firstAttribute="centerX" secondItem="xE6-Rw-nSp" secondAttribute="centerX" id="MAB-Kr-eRK"/>
+                            <constraint firstItem="8Qv-E6-GnP" firstAttribute="top" secondItem="NwE-cn-NBQ" secondAttribute="bottom" constant="18" id="Vrb-L2-UX9"/>
+                            <constraint firstItem="NwE-cn-NBQ" firstAttribute="leading" secondItem="huc-DG-6i9" secondAttribute="trailing" constant="-364" id="VzT-f0-NnA"/>
+                            <constraint firstItem="NwE-cn-NBQ" firstAttribute="top" secondItem="9vG-T7-AT8" secondAttribute="top" constant="69" id="biO-dQ-C3u"/>
                             <constraint firstItem="huc-DG-6i9" firstAttribute="centerX" secondItem="xE6-Rw-nSp" secondAttribute="centerX" id="gRN-HX-Lz3"/>
                             <constraint firstItem="huc-DG-6i9" firstAttribute="leading" secondItem="9vG-T7-AT8" secondAttribute="leading" constant="20" id="qxM-Ma-8lo"/>
-                            <constraint firstItem="FdJ-sW-VOr" firstAttribute="top" secondItem="huc-DG-6i9" secondAttribute="bottom" constant="-65" id="ttd-JN-mjX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D4F-ls-kgb"/>
                     <connections>
-                        <outlet property="areaTexField" destination="w4Q-BL-ahG" id="qNA-Au-nhY"/>
-                        <outlet property="weightTextField" destination="FdJ-sW-VOr" id="F89-xM-T2F"/>
+                        <outlet property="areaButton" destination="NwE-cn-NBQ" id="Nzp-I8-Hd0"/>
+                        <outlet property="weightButton" destination="8Qv-E6-GnP" id="YlH-EL-bVJ"/>
+                        <segue destination="OxL-e2-Wpx" kind="show" identifier="areaEDIT" id="LDS-Yw-nQe"/>
+                        <segue destination="OxL-e2-Wpx" kind="show" identifier="weightEDIT" id="WfU-SS-2R4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cm-m6-Awa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -615,6 +660,7 @@
         <designable name="gJg-fE-jM3">
             <size key="intrinsicContentSize" width="30" height="36"/>
         </designable>
+        <designable name="huc-DG-6i9"/>
         <designable name="mdc-Ad-Lwr">
             <size key="intrinsicContentSize" width="30" height="36"/>
         </designable>
@@ -625,6 +671,9 @@
             <size key="intrinsicContentSize" width="30" height="36"/>
         </designable>
     </designables>
+    <inferredMetricsTieBreakers>
+        <segue reference="LDS-Yw-nQe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Azoto Black" width="273" height="141"/>
         <image name="fosforo tagliato black" width="273" height="141"/>
