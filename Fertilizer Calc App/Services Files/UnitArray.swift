@@ -14,5 +14,5 @@ var nomi: [(unità:String, valore:Double)] = [("Acre", 4046.86), ("Hectare", 100
 
 
 //Array unità prodotto
-let measureUnit: [(misura: String, attributo: Double)] = [("L", 1.00), ("cl", 0.01),("ml", 0.001), ("Kg", 1.00), ("Hg", 0.1), ("g", 0.001)]
+let measureUnit: [(misura: String, attributo: Double)] = [("LB", 0.4545), ("Oz", 0.03), ("g", 0.001), ("Hg", 0.1), ("Kg", 1.00), ("Ton", 1000)]
 

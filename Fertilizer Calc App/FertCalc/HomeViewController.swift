@@ -9,56 +9,45 @@ import UIKit
 import Firebase
 import FirebaseUI
 
-class HomeViewController: UIViewController, FUIAuthDelegate {
+class HomeViewController: UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
-    func showLoginVC() {
-        let autUI = FUIAuth.defaultAuthUI()
-        let providers = [FUIOAuth.appleAuthProvider()]
-        
-        autUI?.providers = providers
-        
-        let autViewController = autUI!.authViewController()
-        autViewController.modalPresentationStyle = .fullScreen
-        self.present(autViewController, animated: true, completion: nil)
-    }
     
-    func showUserInfo(user:User) {
-        
-        print("USER.UID: \(user.uid)")
-        UserDefaults.standard.setValue(user.uid, forKey: "userInfo")
-    }
-    
-    
-    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        if let user = authDataResult?.user {
-            print("GREAT!!! You Are Logged in as \(user.uid)")
-            UserDefaults.standard.setValue(user.uid, forKey: "userInfo")
-        }
-    }
     
     
     
     //MARK: Lifecycle
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            if let user = user {
-                self.showUserInfo(user:user)
-            } else {
-                self.showLoginVC()
-            }
+    func getTheUnit() {
+        if UserDefaults.standard.object(forKey: "NomeArea") == nil {
+            areaUnit.text = String("Area Unit: Hectare")
+        }else{
+            let au = UserDefaults.standard.object(forKey: "NomeArea") as? String
+            areaUnit.text = String("Area Unit: \(au)")
         }
+        if UserDefaults.standard.object(forKey: "NomeWeight") == nil {
+            weightUnit.text = String("Fertilizer Unit: Kg")
+        }else{
+            let wu = UserDefaults.standard.object(forKey: "NomeWeight") as? String
+            weightUnit.text = String("Fertilizer Unit: \(wu)")
+        }
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
         
+        getTheUnit()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-       
     }
+    
+    
+    
     
     //MARK: Connection
     
@@ -68,8 +57,11 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
     
     @IBOutlet weak var three: RoundButton!
     
-   
+    @IBOutlet weak var areaUnit: UILabel!
     
+    @IBOutlet weak var weightUnit: UILabel!
+    
+    @IBOutlet weak var table: UITableView!
     
     
     
@@ -477,9 +469,49 @@ class HomeViewController: UIViewController, FUIAuthDelegate {
     }
     
     
+    //MARK: tableview Settings
+    
+    var azoto: Int
+    var fosforo: Int
+    var potassio: Int
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
     
     
     
+    //MARK: result Button action
+    
+    @IBAction func equalsTapped(_ sender: RoundButton) {
+        
+        let areaUnit = UserDefaults.standard.object(forKey: "ValoreArea") as? String
+        let weightUnit = UserDefaults.standard.object(forKey: "ValoreWeight") as? String
+        
+        if areaUnit != nil && weightUnit != nil {
+            
+            let n: String = nLabel.text ?? "0"
+            let p: String = pLabel.text ?? "0"
+            let k: String = kLabel.text ?? "0"
+            let kg: String = weightlabel.text ?? "0"
+            
+            
+            
+            
+        }
+        
+        
+        
+        
+    }
     
     
     

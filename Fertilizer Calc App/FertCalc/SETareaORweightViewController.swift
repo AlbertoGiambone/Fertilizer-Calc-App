@@ -14,6 +14,7 @@ class SETareaORweightViewController: UIViewController, UITableViewDelegate, UITa
     
     @IBOutlet weak var table: UITableView!
     
+    @IBOutlet weak var selectedUnit: UILabel!
     
 
     //MARK: var for select TV
@@ -24,23 +25,21 @@ class SETareaORweightViewController: UIViewController, UITableViewDelegate, UITa
     
     //MARK: VC Lifecycle
     
-    
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        if area == true {
-            
-        }
-        if weight == true {
-            
-        }
-    }
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        table.delegate = self
+        table.dataSource = self
+        
+        if area == true {
+            selectedUnit.text = UserDefaults.standard.object(forKey: "NomeArea") as? String
+        }
+        if weight == true {
+            selectedUnit.text = UserDefaults.standard.object(forKey: "NomeWeight") as? String
+        }
+        
     }
     
 
@@ -52,12 +51,16 @@ class SETareaORweightViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        var L: Int?
+        
         if area == true {
-            return nomi.count
+            L = nomi.count
         }
         if weight == true {
-            return measureUnit.count
+            L = measureUnit.count
         }
+        
+        return L!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,6 +77,25 @@ class SETareaORweightViewController: UIViewController, UITableViewDelegate, UITa
         
         return cell!
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     table.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        if area == true {
+            UserDefaults.standard.setValue(nomi[indexPath.row].unità, forKey: "NomeArea")
+            UserDefaults.standard.setValue(nomi[indexPath.row].valore, forKey: "ValoreArea")
+            selectedUnit.text = nomi[indexPath.row].unità
+        }
+        if weight == true {
+            UserDefaults.standard.setValue(measureUnit[indexPath.row].misura, forKey: "NomeWeight")
+            UserDefaults.standard.setValue(measureUnit[indexPath.row].attributo, forKey: "ValoreWeight")
+            selectedUnit.text = measureUnit[indexPath.row].misura
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        table.cellForRow(at: indexPath)?.accessoryType = .none
+    }
+   
     
     
 }

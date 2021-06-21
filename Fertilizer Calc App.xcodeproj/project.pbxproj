@@ -22,6 +22,7 @@
 		A0FB68FD266535A2002E9EE4 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB68FC266535A2002E9EE4 /* RoundLabel.swift */; };
 		A0FB68FF2665439B002E9EE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */; };
 		A0FB6901266A5931002E9EE4 /* UnitArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FB6900266A5931002E9EE4 /* UnitArray.swift */; };
+		A0FBD0912680B9C600503387 /* HomeFiledFertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FBD0902680B9C600503387 /* HomeFiledFertViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		A0FB68FC266535A2002E9EE4 /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundLabel.swift; sourceTree = "<group>"; };
 		A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A0FB6900266A5931002E9EE4 /* UnitArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitArray.swift; sourceTree = "<group>"; };
+		A0FBD0902680B9C600503387 /* HomeFiledFertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFiledFertViewController.swift; sourceTree = "<group>"; };
 		E5034A6F29BF3C0CF465D747 /* Pods_Fertilizer_Calc_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fertilizer_Calc_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,11 +102,10 @@
 				A01165622625EAF100F6F2E3 /* Fertilizer Calc App.entitlements */,
 				A05F6E9626259B3900AF46FA /* AppDelegate.swift */,
 				A05F6E9826259B3900AF46FA /* SceneDelegate.swift */,
+				A0FBD0942680BA1200503387 /* Settings */,
 				A05F6E9C26259B3900AF46FA /* Main.storyboard */,
-				A0B98AE7267157560091BE46 /* SETareaORweightViewController.swift */,
-				A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */,
-				A01165642625F41F00F6F2E3 /* FastcalcViewController.swift */,
-				A011655F2625D42B00F6F2E3 /* HomeViewController.swift */,
+				A0FBD0922680B9D000503387 /* FieldFert */,
+				A0FBD0932680B9E400503387 /* FertCalc */,
 				A05F6E9F26259B3A00AF46FA /* Assets.xcassets */,
 				A05F6EA126259B3A00AF46FA /* LaunchScreen.storyboard */,
 				A05F6EA426259B3A00AF46FA /* Info.plist */,
@@ -123,6 +124,32 @@
 				A06F57F426623D630003CB4A /* RoundTextField.swift */,
 			);
 			path = "Services Files";
+			sourceTree = "<group>";
+		};
+		A0FBD0922680B9D000503387 /* FieldFert */ = {
+			isa = PBXGroup;
+			children = (
+				A0FBD0902680B9C600503387 /* HomeFiledFertViewController.swift */,
+			);
+			path = FieldFert;
+			sourceTree = "<group>";
+		};
+		A0FBD0932680B9E400503387 /* FertCalc */ = {
+			isa = PBXGroup;
+			children = (
+				A0B98AE7267157560091BE46 /* SETareaORweightViewController.swift */,
+				A01165642625F41F00F6F2E3 /* FastcalcViewController.swift */,
+				A011655F2625D42B00F6F2E3 /* HomeViewController.swift */,
+			);
+			path = FertCalc;
+			sourceTree = "<group>";
+		};
+		A0FBD0942680BA1200503387 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A0FB68FE2665439B002E9EE4 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06F57F32662267D0003CB4A /* RoundButton.swift in Sources */,
+				A0FBD0912680B9C600503387 /* HomeFiledFertViewController.swift in Sources */,
 				A05F6E9726259B3900AF46FA /* AppDelegate.swift in Sources */,
 				A0B98AE8267157560091BE46 /* SETareaORweightViewController.swift in Sources */,
 				A0FB68FD266535A2002E9EE4 /* RoundLabel.swift in Sources */,
@@ -423,7 +451,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alberto-Giambone.Agricolture-Smart-Calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -445,7 +473,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Alberto-Giambone.Agricolture-Smart-Calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
