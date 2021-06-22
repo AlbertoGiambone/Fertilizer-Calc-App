@@ -6,10 +6,8 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseUI
 
-class HomeViewController: UIViewController, FUIAuthDelegate, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController {
 
     
     
@@ -24,13 +22,15 @@ class HomeViewController: UIViewController, FUIAuthDelegate, UITableViewDelegate
             areaUnit.text = String("Area Unit: Hectare")
         }else{
             let au = UserDefaults.standard.object(forKey: "NomeArea") as? String
-            areaUnit.text = String("Area Unit: \(au)")
+            areaUnit.text = String("Area Unit: \(au!)")
         }
         if UserDefaults.standard.object(forKey: "NomeWeight") == nil {
             weightUnit.text = String("Fertilizer Unit: Kg")
+            segment.setTitle("Kg", forSegmentAt: 3)
         }else{
             let wu = UserDefaults.standard.object(forKey: "NomeWeight") as? String
-            weightUnit.text = String("Fertilizer Unit: \(wu)")
+            weightUnit.text = String("Fertilizer Unit: \(wu!)")
+            segment.setTitle(wu, forSegmentAt: 3)
         }
     }
     
@@ -61,7 +61,6 @@ class HomeViewController: UIViewController, FUIAuthDelegate, UITableViewDelegate
     
     @IBOutlet weak var weightUnit: UILabel!
     
-    @IBOutlet weak var table: UITableView!
     
     
     
@@ -470,23 +469,14 @@ class HomeViewController: UIViewController, FUIAuthDelegate, UITableViewDelegate
     
     
     //MARK: tableview Settings
-    
+    /*
     var azoto: Int
     var fosforo: Int
     var potassio: Int
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-    
+     */
+ 
+
+     
     
     
     //MARK: result Button action
@@ -503,8 +493,9 @@ class HomeViewController: UIViewController, FUIAuthDelegate, UITableViewDelegate
             let k: String = kLabel.text ?? "0"
             let kg: String = weightlabel.text ?? "0"
             
-            
-            
+            let partial = (Double(n)!/100)
+            let nextPartial = partial * Double(kg)!
+            let postPartial = nextPartial * (Double(areaUnit!)!/10000)
             
         }
         

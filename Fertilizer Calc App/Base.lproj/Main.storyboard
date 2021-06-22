@@ -158,7 +158,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="wrO-Pf-N1X">
-                                                <rect key="frame" x="69.5" y="616" width="275" height="50"/>
+                                                <rect key="frame" x="69.5" y="604" width="275" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbS-O7-lre" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -380,7 +380,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Phz-A1-fUR">
-                                                <rect key="frame" x="69.5" y="551" width="275" height="50"/>
+                                                <rect key="frame" x="69.5" y="546" width="275" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZSk-Ib-7SY" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -486,27 +486,27 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N Unit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yj-CK-2aD">
-                                                <rect key="frame" x="25" y="84" width="123" height="35"/>
+                                                <rect key="frame" x="25" y="84" width="123" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="123" id="6c7-yE-pCM"/>
-                                                    <constraint firstAttribute="height" constant="35" id="WcL-61-Hdx"/>
+                                                    <constraint firstAttribute="height" constant="25" id="WcL-61-Hdx"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="19"/>
                                                 <color key="textColor" systemColor="systemTealColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P Unit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47c-vW-pg5">
-                                                <rect key="frame" x="25" y="127" width="123" height="35"/>
+                                                <rect key="frame" x="25" y="127" width="123" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="123" id="MAy-Pf-o43"/>
-                                                    <constraint firstAttribute="height" constant="35" id="adI-Xm-Suz"/>
+                                                    <constraint firstAttribute="height" constant="25" id="adI-Xm-Suz"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="19"/>
                                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FNc-0n-hLj">
-                                                <rect key="frame" x="69" y="428" width="276" height="32"/>
+                                                <rect key="frame" x="69" y="443" width="276" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="276" id="OzT-lv-bKD"/>
                                                     <constraint firstAttribute="height" constant="31" id="aq0-AE-uq0"/>
@@ -523,10 +523,10 @@
                                                 </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K Unit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz7-c3-e3y">
-                                                <rect key="frame" x="25" y="170" width="123" height="35"/>
+                                                <rect key="frame" x="25" y="170" width="123" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="123" id="YZ2-e6-3iA"/>
-                                                    <constraint firstAttribute="height" constant="35" id="jNC-Cz-6k9"/>
+                                                    <constraint firstAttribute="height" constant="25" id="jNC-Cz-6k9"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="19"/>
                                                 <color key="textColor" systemColor="systemYellowColor"/>
@@ -562,25 +562,12 @@
                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eGz-Ap-F3U">
-                                                <rect key="frame" x="8" y="315" width="398" height="47"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="20" id="xr5-a1-YuE">
-                                                        <rect key="frame" x="0.0" y="24.5" width="398" height="20"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xr5-a1-YuE" id="jGp-c8-pWH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="398" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </tableViewCellContentView>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                            </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-UW-UHG" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
-                                                <rect key="frame" x="69" y="723" width="125" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-UW-UHG" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                                <rect key="frame" x="69" y="672" width="125" height="35"/>
                                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="iJW-xE-bMv"/>
+                                                    <constraint firstAttribute="width" constant="125" id="f0c-kd-Bxe"/>
+                                                    <constraint firstAttribute="height" constant="35" id="iJW-xE-bMv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Galvji-Bold" family="Galvji" pointSize="15"/>
                                                 <state key="normal" title="=">
@@ -595,21 +582,31 @@
                                                     <action selector="equalsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0W-3l-MbJ"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GI-G5-DJ5">
+                                                <rect key="frame" x="106" y="219" width="202" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="202" id="4Oo-kR-Vim"/>
+                                                    <constraint firstAttribute="height" constant="33" id="UOk-GN-OxO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="FNc-0n-hLj" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" id="1KA-Uc-pnC"/>
-                                            <constraint firstItem="iz7-c3-e3y" firstAttribute="top" secondItem="47c-vW-pg5" secondAttribute="bottom" constant="8" id="46h-KL-LvI"/>
-                                            <constraint firstAttribute="trailing" secondItem="eGz-Ap-F3U" secondAttribute="trailing" constant="8" id="4QD-sJ-EkI"/>
-                                            <constraint firstAttribute="bottom" secondItem="wrO-Pf-N1X" secondAttribute="bottom" constant="59" id="6NQ-Da-Cso"/>
+                                            <constraint firstItem="iz7-c3-e3y" firstAttribute="top" secondItem="47c-vW-pg5" secondAttribute="bottom" constant="18" id="46h-KL-LvI"/>
+                                            <constraint firstItem="2GI-G5-DJ5" firstAttribute="top" secondItem="iz7-c3-e3y" secondAttribute="bottom" constant="24" id="4FX-nt-Kw5"/>
+                                            <constraint firstItem="2GI-G5-DJ5" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" id="5mD-rz-Aqd"/>
+                                            <constraint firstAttribute="bottom" secondItem="wrO-Pf-N1X" secondAttribute="bottom" constant="71" id="6NQ-Da-Cso"/>
                                             <constraint firstItem="iz7-c3-e3y" firstAttribute="leading" secondItem="y1F-vN-98n" secondAttribute="leading" constant="25" id="8eh-vR-adF"/>
                                             <constraint firstItem="47c-vW-pg5" firstAttribute="leading" secondItem="y1F-vN-98n" secondAttribute="leading" constant="25" id="9Ad-Wr-7ZA"/>
                                             <constraint firstItem="1Yj-CK-2aD" firstAttribute="leading" secondItem="y1F-vN-98n" secondAttribute="leading" constant="25" id="9LJ-Od-zGN"/>
-                                            <constraint firstItem="wrO-Pf-N1X" firstAttribute="top" secondItem="Phz-A1-fUR" secondAttribute="bottom" constant="15" id="MlN-Os-Fmk"/>
+                                            <constraint firstItem="wrO-Pf-N1X" firstAttribute="top" secondItem="Phz-A1-fUR" secondAttribute="bottom" constant="8" id="MlN-Os-Fmk"/>
                                             <constraint firstItem="dqt-yL-Xv4" firstAttribute="top" secondItem="y1F-vN-98n" secondAttribute="top" constant="22" id="Moz-nF-iv7"/>
                                             <constraint firstItem="nRw-T9-Bk6" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" id="QYQ-gB-7SE"/>
-                                            <constraint firstItem="eGz-Ap-F3U" firstAttribute="top" secondItem="iz7-c3-e3y" secondAttribute="bottom" constant="110" id="Ray-vj-vj9"/>
-                                            <constraint firstAttribute="bottom" secondItem="kcW-UW-UHG" secondAttribute="bottom" constant="21" id="S6W-8k-nHu"/>
+                                            <constraint firstAttribute="bottom" secondItem="kcW-UW-UHG" secondAttribute="bottom" constant="18" id="S6W-8k-nHu"/>
                                             <constraint firstAttribute="trailing" secondItem="xFA-NX-oBS" secondAttribute="trailing" constant="64" id="T7U-r6-V4C"/>
                                             <constraint firstItem="dqt-yL-Xv4" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" constant="-62.5" id="UPX-if-gFQ"/>
                                             <constraint firstItem="wrO-Pf-N1X" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" id="Uv8-lj-6hQ"/>
@@ -617,14 +614,12 @@
                                             <constraint firstItem="Phz-A1-fUR" firstAttribute="centerX" secondItem="y1F-vN-98n" secondAttribute="centerX" id="VcW-Jn-FdM"/>
                                             <constraint firstItem="Orm-MM-qxs" firstAttribute="top" secondItem="y1F-vN-98n" secondAttribute="top" constant="61" id="XlQ-ra-TxJ"/>
                                             <constraint firstItem="1Yj-CK-2aD" firstAttribute="top" secondItem="y1F-vN-98n" secondAttribute="top" constant="84" id="ahQ-nX-7h7"/>
-                                            <constraint firstItem="nRw-T9-Bk6" firstAttribute="top" secondItem="FNc-0n-hLj" secondAttribute="bottom" constant="29" id="iMl-WL-dCD"/>
-                                            <constraint firstItem="eGz-Ap-F3U" firstAttribute="leading" secondItem="y1F-vN-98n" secondAttribute="leading" constant="8" id="iWF-vZ-PNX"/>
-                                            <constraint firstItem="Phz-A1-fUR" firstAttribute="top" secondItem="nRw-T9-Bk6" secondAttribute="bottom" constant="13" id="mHN-Vk-7OM"/>
+                                            <constraint firstItem="nRw-T9-Bk6" firstAttribute="top" secondItem="FNc-0n-hLj" secondAttribute="bottom" constant="14" id="iMl-WL-dCD"/>
+                                            <constraint firstItem="Phz-A1-fUR" firstAttribute="top" secondItem="nRw-T9-Bk6" secondAttribute="bottom" constant="8" id="mHN-Vk-7OM"/>
                                             <constraint firstItem="dqt-yL-Xv4" firstAttribute="leading" secondItem="y1F-vN-98n" secondAttribute="leading" constant="25" id="ps3-Cq-Fm4"/>
-                                            <constraint firstItem="47c-vW-pg5" firstAttribute="top" secondItem="1Yj-CK-2aD" secondAttribute="bottom" constant="8" id="sD6-Z0-hOI"/>
-                                            <constraint firstItem="kcW-UW-UHG" firstAttribute="top" secondItem="wrO-Pf-N1X" secondAttribute="bottom" constant="8" id="vM0-y3-fUe"/>
+                                            <constraint firstItem="47c-vW-pg5" firstAttribute="top" secondItem="1Yj-CK-2aD" secondAttribute="bottom" constant="18" id="sD6-Z0-hOI"/>
+                                            <constraint firstItem="kcW-UW-UHG" firstAttribute="top" secondItem="wrO-Pf-N1X" secondAttribute="bottom" constant="18" id="vM0-y3-fUe"/>
                                             <constraint firstItem="xFA-NX-oBS" firstAttribute="top" secondItem="Orm-MM-qxs" secondAttribute="bottom" constant="12" id="vag-tR-b1o"/>
-                                            <constraint firstItem="FNc-0n-hLj" firstAttribute="top" secondItem="eGz-Ap-F3U" secondAttribute="bottom" constant="66" id="y1y-6A-L3b"/>
                                             <constraint firstAttribute="trailing" secondItem="Orm-MM-qxs" secondAttribute="trailing" constant="8" id="zSO-eD-j9y"/>
                                         </constraints>
                                     </view>
@@ -670,7 +665,6 @@
                         <outlet property="one" destination="MYV-cr-C59" id="DBn-Pu-kgF"/>
                         <outlet property="pLabel" destination="47c-vW-pg5" id="nnT-KB-vAT"/>
                         <outlet property="segment" destination="FNc-0n-hLj" id="YYe-UL-cQr"/>
-                        <outlet property="table" destination="eGz-Ap-F3U" id="Saf-al-YZM"/>
                         <outlet property="three" destination="EuF-XQ-0VT" id="uHg-WC-cdR"/>
                         <outlet property="two" destination="zap-JC-dO2" id="7LN-Hv-mGA"/>
                         <outlet property="weightUnit" destination="Orm-MM-qxs" id="hOY-8D-7ol"/>
@@ -780,6 +774,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="svy-EQ-s2z" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Slx-7p-T8t">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
