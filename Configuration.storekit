@@ -1,0 +1,129 @@
+{
+  "identifier" : "66A257DB",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "1450299266",
+    "_developerTeamID" : "FWDSDKN998",
+    "_failTransactionsEnabled" : false,
+    "_lastSynchronizedDate" : 701639667.75732195,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21274153",
+      "localizations" : [
+
+      ],
+      "name" : "Unit",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "9.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6446312482",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Custom Area Unit",
+              "displayName" : "Custom Area Unit",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "rc_cu_999_1y",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual, $9.99",
+          "subscriptionGroupID" : "21274153",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "1.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6446313806",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Custom Area Unit",
+              "displayName" : "Custom Area Unit",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "rc_cu_999_1m",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly, $1.99",
+          "subscriptionGroupID" : "21274153",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
