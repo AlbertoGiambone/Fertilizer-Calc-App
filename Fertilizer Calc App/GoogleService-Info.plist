@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>204677704683-ppn7lg185ktoq5g8sdvs0lme855ou51c.apps.googleusercontent.com</string>
+	<string>1028325345549-6pjn3orc5k1mmt81gon8sbli1b8p095j.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.204677704683-ppn7lg185ktoq5g8sdvs0lme855ou51c</string>
+	<string>com.googleusercontent.apps.1028325345549-6pjn3orc5k1mmt81gon8sbli1b8p095j</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCz1E0Oe0tmyjXqgEjseiUJdHMAYj_Ha_8</string>
+	<string>AIzaSyCnrKvIQfcWwvrEgsYIxOuJ0xSdFqMeows</string>
 	<key>GCM_SENDER_ID</key>
-	<string>204677704683</string>
+	<string>1028325345549</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Alberto-Giambone.Agricolture-Smart-Calc</string>
 	<key>PROJECT_ID</key>
-	<string>myfarm-80328</string>
+	<string>farm-14b93</string>
 	<key>STORAGE_BUCKET</key>
-	<string>myfarm-80328.appspot.com</string>
+	<string>farm-14b93.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:204677704683:ios:f3f021c6585191518587ae</string>
-	<key>DATABASE_URL</key>
-	<string>https://myfarm-80328.firebaseio.com</string>
+	<string>1:1028325345549:ios:74caecf572d79052524844</string>
 </dict>
 </plist>

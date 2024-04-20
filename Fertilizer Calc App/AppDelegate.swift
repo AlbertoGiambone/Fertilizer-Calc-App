@@ -2,24 +2,38 @@
 //  AppDelegate.swift
 //  Fertilizer Calc App
 //
-//  Created by Alberto Giambone on 13/04/21.
+//  Created by Alberto Giambone on 14/01/22.
 //
 
 import UIKit
 import Firebase
+import RevenueCat
+import StoreKit
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
         FirebaseApp.configure()
+        
+        
+        //RevenueCat
+        Purchases.logLevel = .debug
+        Purchases.configure(with: Configuration.Builder(withAPIKey: Costants.apiKey).with(usesStoreKit2IfAvailable: true).build())
+        
+        Purchases.shared.delegate = self
+        
+        
+        //UINavigationBar.appearance().tintColor = UIColor.white
         return true
     }
 
+
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -37,3 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: PurchasesDelegate{
+    func purchases(_ purchases: Purchases, receivedUpdated customerInfo: CustomerInfo) {
+        print("Modified")
+    }
+}

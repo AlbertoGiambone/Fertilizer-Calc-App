@@ -1,18 +1,17 @@
 //
-//  CalcVC.swift
+//  iPadCalcVC.swift
 //  Fertilizer Calc App
 //
-//  Created by Alberto Giambone on 22/02/23.
+//  Created by Alberto Giambone on 19/03/24.
 //
 
 import UIKit
-import Firebase
 import RevenueCat
 import StoreKit
+import Firebase
 
-class CalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+class iPadCalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    
     //MARK: Connection
     
     @IBOutlet weak var NInput: RoundButton!
@@ -50,8 +49,6 @@ class CalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPi
     @IBOutlet weak var Kbutton: UIButton!
     
     @IBOutlet weak var KGbutton: UIButton!
-    
-    @IBOutlet weak var resultBackGround: UILabel!
   
     @IBOutlet weak var KG_Label: UILabel!
     
@@ -95,7 +92,7 @@ class CalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPi
         super.viewDidLoad()
 
         overrideUserInterfaceStyle = .light
-        resultBackGround.layer.cornerRadius = 15
+        //resultBackGround.layer.cornerRadius = 15
         
         areaButton.titleLabel?.adjustsFontSizeToFitWidth = true
         areaButton.titleLabel?.numberOfLines = 1
@@ -182,8 +179,9 @@ class CalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPi
         return singleFert.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "cell") as! CalcTVCell
-        cell.CalcTVLabel.text = String(singleFert[indexPath.row])
+        let cell = table.dequeueReusableCell(withIdentifier: "cell") as! iPadCalcTVCell
+        cell.fertLabel.text = String(singleFert[indexPath.row])
+        cell.fertLabel.textAlignment = .left
         
         return cell
     }
@@ -976,14 +974,3 @@ class CalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPi
     
 
 }
-
-
-extension Dictionary {
-    var queryString: String {
-        var output: String = ""
-        forEach({ output += "\($0.key)=\($0.value)&" })
-        output = String(output.dropLast())
-        return output
-    }
-}
-

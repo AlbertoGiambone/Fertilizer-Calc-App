@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  iPadFieldsManagerVC.swift
 //  Fertilizer Calc App
 //
-//  Created by Alberto Giambone on 14/01/22.
+//  Created by Alberto Giambone on 29/03/24.
 //
 
 import UIKit
@@ -13,152 +13,35 @@ import RevenueCat
 import StoreKit
 import DGCharts
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class iPadFieldsManagerVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var refreshControl = UIRefreshControl()
-    
     //MARK: Connection
-
+    
     @IBOutlet weak var table: UITableView!
     
     @IBOutlet weak var pullToRefreshLabel: UILabel!
     
-    @IBOutlet weak var VCTitle: UILabel!
     
-    @IBOutlet weak var plusButton: UIButton!
+    //MARK: Lifecycle
     
-    
-    
-    //MARK: functionality
-    
-    let db = Firestore.firestore()
-    
-    //Array
-    
-    var whole = [FarmField]()
-    var single: FarmField?
-    var fertilization = [Fertilization]()
-    
-    @IBAction func PlusButtontapped(_ sender: UIButton) {
-        
-        
-        let alert = UIAlertController(title: "New Field", message: nil, preferredStyle: .alert)
-        alert.addTextField { (textField) in
-            textField.placeholder = "Name"
-        }
-        alert.addTextField { (textField) in
-            textField.placeholder = "Area Ha"
-            textField.keyboardType = .decimalPad
-        }
-        
-        
-        let action = UIAlertAction(title: "Save", style: .default)  { (_) in
-            let Name = alert.textFields![0].text
-            var Area = alert.textFields![1].text
-            
-            if Name == "" {
-                print("NO NAME!")
-                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-                self.present(alert, animated: true, completion: nil)
-            }
-
-            let db = Firestore.firestore()
-            
-            Area?.replace(",", with: ".")
-            db.collection("FarmField").addDocument(data: [
-                "name": String(Name ?? ""), "area": String(Area ?? ""), "nitrogenLimit": "", "phosphorusLimit": "", "potassiumLimit": "", "calciumLimit": "", "magnesiumLimit": "", "UID": self.userID!, "DID": ""
-            
-            ]) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
-                }
-            }
-            
-            self.whole.removeAll()
-            Task {
-                await self.queryFirestoreField()
-                
-            }
-            
-            self.run(after: 1){
-            self.table.reloadData()
-                }
-            }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction!) in
-            print("Cancel button tapped");
-        }
-        alert.addAction(cancelAction)
-        alert.addAction(action)
-    
-        present(alert, animated: true, completion: nil)
-        
-    
-        
-        
-    }
-    
-    //MARK: Firestore CALL
-    
-    
-    func queryFirestoreField() async {
-        
-        let db = Firestore.firestore()
-        
-        do {
-            let querySnapshot = try await db.collection("FarmField").whereField("UID", isEqualTo: userID ?? "").getDocuments()
-            for document in querySnapshot.documents {
-                let y = FarmField(name: document.data()["name"] as? String ?? "", area: document.data()["area"] as? String ?? "", growing: document.data()["growing"] as? String ?? "", nitrogenLimit: document.data()["nitrogenLimit"] as? String ?? "", phosphorusLimit: document.data()["phosphorusLimit"] as? String ?? "", potassiumLimit: document.data()["potassiumLimit"] as? String ?? "", calciumLimit: document.data()["calciumLimit"] as? String ?? "", magnesiumLimit: document.data()["magnesiumLimit"] as? String ?? "", UID: self.userID ?? "", DID: document.documentID)
-                
-                self.whole.append(y)
-                //print("QUESTO é IL CAMPO: \(y)")
-            }
-        } catch let err {
-            print("Error getting documents: \(err)")
-        }
-        self.table.reloadData()
-    }
-
-    func queryFertilization() async {
-        
-        let db = Firestore.firestore()
-        
-        do{
-            let querySnapShot = try await db.collection("Ferilization").whereField("UID", isEqualTo: userID ?? "").getDocuments()
-            for doc in querySnapShot.documents {
-                let f = Fertilization(nitrogen: doc.data()["nitrogen"] as? String ?? "", phosphorus: doc.data()["phosphorus"] as? String ?? "", potassium: doc.data()["potassium"] as? String ?? "", calcium: doc.data()["calcium"] as? String ?? "", magnesium: doc.data()["magnesium"] as? String ?? "", quantity: doc.data()["quantity"] as? String ?? "", date: doc.data()["date"] as? String ?? "", UID: doc.data()["UID"] as? String ?? "", FID: doc.data()["FID"] as? String ?? "", DID: doc.documentID)
-                self.fertilization.append(f)
-            }
-        } catch let err {
-            print("Error Getting Fertilizaion doc: \(err)")
-        }
-        self.table.reloadData()
-    }
-    
-    //MARK: LifeCycle
+    var refreshControl = UIRefreshControl()
     
     var userID: String?
     var areaResult: String?
     var weightResult: String?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .darkGray
         self.tabBarController?.tabBar.barTintColor = .white
-        /*
-        if traitCollection.userInterfaceStyle == .dark {
-            VCTitle.textColor = .white
-        }else{
-            VCTitle.textColor = .black
-        }
-        */
         
         //MARK: unit
         
         areaResult = UserDefaults.standard.object(forKey: "areaResultUnit") as? String ?? "10000.00"
         weightResult = UserDefaults.standard.object(forKey: "weightResultUnit") as? String ?? "1.00"
         
-        
         //Make PayWall for USER not already logged in
+        
         var sub: Bool?
         
         Task { @MainActor in
@@ -176,7 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         print("Already Purchased!")
                         
                     }else{
-      
+                        
                         Purchases.shared.getCustomerInfo{ (customerInfo, error) in
                             if customerInfo?.entitlements[Costants.entitlementID]?.isActive == true {
                                 print("User with Active Sub...")
@@ -196,7 +79,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
         }
         
-        
         //MARK: Sign IN
         
         if UserDefaults.standard.object(forKey: "userInfo") == nil || sub == false {
@@ -214,17 +96,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
         }
         userID = UserDefaults.standard.object(forKey: "userInfo") as? String
-    
-        
-        
+
         Task {
             await queryFirestoreField()
             await queryFertilization()
         }
-        
     }
-    
-    
     
     //MARK: func for dispatch
     
@@ -235,15 +112,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    
     let monitor =  NWPathMonitor()  //MARK: Network checking
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        table.dataSource = self
+
         table.delegate = self
-        self.table.rowHeight = 242
+        table.dataSource = self
         overrideUserInterfaceStyle = .light
         
         // Add Refresh Control to Table View
@@ -295,21 +170,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.pullToRefreshLabel.textColor = .white
         self.pullToRefreshLabel.text = String("⏬ Pull Down To Refresh ⏬")
         }
-        
     }
-    
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        whole.removeAll()
-        chartDataEntry.removeAll()
-        fertilization.removeAll()
-        n = 0
-        p = 0
-        k = 0
-        mg = 0
-        ca = 0
-    }
-    
     
     @objc func refreshTable(toRefresh sender: UIRefreshControl?) {
             
@@ -350,16 +211,69 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
 
     
-    //MARK: TableView
+    override func viewDidDisappear(_ animated: Bool) {
+        whole.removeAll()
+        chartDataEntry.removeAll()
+        fertilization.removeAll()
+        n = 0
+        p = 0
+        k = 0
+        mg = 0
+        ca = 0
+    }
+    
+    
+    //MARK: Firebase
+    
+    let db = Firestore.firestore()
+    
+    func queryFirestoreField() async {
+        
+        do {
+            let querySnapshot = try await db.collection("FarmField").whereField("UID", isEqualTo: userID ?? "").getDocuments()
+            for document in querySnapshot.documents {
+                let y = FarmField(name: document.data()["name"] as? String ?? "", area: document.data()["area"] as? String ?? "", growing: document.data()["growing"] as? String ?? "", nitrogenLimit: document.data()["nitrogenLimit"] as? String ?? "", phosphorusLimit: document.data()["phosphorusLimit"] as? String ?? "", potassiumLimit: document.data()["potassiumLimit"] as? String ?? "", calciumLimit: document.data()["calciumLimit"] as? String ?? "", magnesiumLimit: document.data()["magnesiumLimit"] as? String ?? "", UID: self.userID ?? "", DID: document.documentID)
+                
+                self.whole.append(y)
+                //print("QUESTO é IL CAMPO: \(y)")
+            }
+        } catch let err {
+            print("Error getting documents: \(err)")
+        }
+        self.table.reloadData()
+    }
+    
+    func queryFertilization() async {
+        
+        let db = Firestore.firestore()
+        
+        do{
+            let querySnapShot = try await db.collection("Ferilization").whereField("UID", isEqualTo: userID ?? "").getDocuments()
+            for doc in querySnapShot.documents {
+                let f = Fertilization(nitrogen: doc.data()["nitrogen"] as? String ?? "", phosphorus: doc.data()["phosphorus"] as? String ?? "", potassium: doc.data()["potassium"] as? String ?? "", calcium: doc.data()["calcium"] as? String ?? "", magnesium: doc.data()["magnesium"] as? String ?? "", quantity: doc.data()["quantity"] as? String ?? "", date: doc.data()["date"] as? String ?? "", UID: doc.data()["UID"] as? String ?? "", FID: doc.data()["FID"] as? String ?? "", DID: doc.documentID)
+                self.fertilization.append(f)
+            }
+        } catch let err {
+            print("Error Getting Fertilizaion doc: \(err)")
+        }
+        self.table.reloadData()
+    }
+    
+    //Array
+    
+    var whole = [FarmField]()
+    var single: FarmField?
+    var fertilization = [Fertilization]()
+    
+    //MARK: TV Func
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return whole.count
+        whole.count
     }
-
     
     var chartDataEntry = [BarChartDataEntry]()
     var n: Double = 0
@@ -369,11 +283,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var ca: Double = 0
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! iPadFieldsManagerTVCELL
         
-        cell.nameLabel.text = String(" \(whole[indexPath.row].name)")
-        cell.dataLabel.text = String("GROWING: \(whole[indexPath.row].growing)")
-        cell.areaLabel.text = String("AREA: \(whole[indexPath.row].area) Ha ")
+        cell.fieldName.text = whole[indexPath.row].name
+        cell.areaLabel.text = String("GROWING: \(whole[indexPath.row].growing)")
+        cell.growingLabel.text = String("AREA: \(whole[indexPath.row].area) Ha")
         
         //MARK: chart
      
@@ -525,31 +439,62 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
+    //MARK: Action
     
-    //MARK: Segue
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "selected" {
-            
-            let nextVC = segue.destination as! FieldViewController
-            nextVC.docID = selectedID
-            nextVC.fieldNAME = selectedNAME
-            nextVC.fieldAREA = selectedAREA
-            nextVC.fieldGROWING = selectedGROWING
-            nextVC.fieldN = selectedN
-            nextVC.fieldPH = selectedPH
-            nextVC.fieldPO = selectedPO
-            nextVC.fieldCA = selectedCA
-            nextVC.fieldMG = selectedMG
+    @IBAction func plusButtonTapped(_ sender: UIButton) {
+        let alert = UIAlertController(title: "New Field", message: nil, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Name"
         }
+        alert.addTextField { (textField) in
+            textField.placeholder = "Area Ha"
+            textField.keyboardType = .decimalPad
+        }
+        
+        
+        let action = UIAlertAction(title: "Save", style: .default)  { (_) in
+            let Name = alert.textFields![0].text
+            var Area = alert.textFields![1].text
+            
+            if Name == "" {
+                print("NO NAME!")
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                self.present(alert, animated: true, completion: nil)
+            }
+
+            let db = Firestore.firestore()
+            
+            Area?.replace(",", with: ".")
+            db.collection("FarmField").addDocument(data: [
+                "name": String(Name ?? ""), "area": String(Area ?? ""), "nitrogenLimit": "", "phosphorusLimit": "", "potassiumLimit": "", "calciumLimit": "", "magnesiumLimit": "", "UID": self.userID!, "DID": ""
+            
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                }
+            }
+            
+            self.whole.removeAll()
+            Task {
+                await self.queryFirestoreField()
+                
+            }
+            
+            self.run(after: 1){
+            self.table.reloadData()
+                }
+            }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action:UIAlertAction!) in
+            print("Cancel button tapped");
+        }
+        alert.addAction(cancelAction)
+        alert.addAction(action)
+    
+        present(alert, animated: true, completion: nil)
     }
     
 
-    
 }
 
-extension String {
-    mutating func replace(_ originalString:String, with newString:String) {
-        self = self.replacingOccurrences(of: originalString, with: newString)
-    }
-}
+
