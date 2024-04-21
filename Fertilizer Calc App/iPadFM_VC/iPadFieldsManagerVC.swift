@@ -437,6 +437,23 @@ class iPadFieldsManagerVC: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    //MARK: Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selected" {
+            
+            let nextVC = segue.destination as! iPadFDetailVC
+            nextVC.docID = selectedID
+            nextVC.fieldNAME = selectedNAME
+            nextVC.fieldAREA = selectedAREA
+            nextVC.fieldGROWING = selectedGROWING
+            nextVC.fieldN = selectedN
+            nextVC.fieldPH = selectedPH
+            nextVC.fieldPO = selectedPO
+            nextVC.fieldCA = selectedCA
+            nextVC.fieldMG = selectedMG
+        }
+    }
     
     
     //MARK: Action
