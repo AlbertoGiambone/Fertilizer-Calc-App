@@ -247,14 +247,14 @@ class iPadFDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! FieldCellTableViewCell
+        let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! iPadFdTvCell
         
         cell.dateLabel.text = fert[indexPath.row].date
-        cell.nitrogenLabel.text = fert[indexPath.row].nitrogen
-        cell.phosphorusLabel.text = fert[indexPath.row].phosphorus
-        cell.potassiumLabel.text = fert[indexPath.row].potassium
-        cell.magnesiumLabel.text = fert[indexPath.row].magnesium
-        cell.calciumLabel.text = fert[indexPath.row].calcium
+        cell.nitrogenLabel.text = String("N \(fert[indexPath.row].nitrogen)")
+        cell.phosphorusLabel.text = String("P \(fert[indexPath.row].phosphorus)")
+        cell.potassiumLabel.text = String("K \(fert[indexPath.row].potassium)")
+        cell.magnesiumLabel.text = String("Mg \(fert[indexPath.row].magnesium)")
+        cell.calciuLabel.text = String("Ca \(fert[indexPath.row].calcium)")
         cell.quantityLabel.text = String("\(fert[indexPath.row].quantity) Kg/Ha")
 
         return cell
@@ -318,7 +318,7 @@ class iPadFDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editFieldSettings" {
             
-            let nextVC = segue.destination as! FieldSettingsViewController
+            let nextVC = segue.destination as! iPadFieldSettingsVC
             nextVC.fieldID = docID
             nextVC.fieldName = fieldNAME
             nextVC.fieldGrowing = fieldGROWING
@@ -337,7 +337,7 @@ class iPadFDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             nextVC.fieldName = fieldNAME
         }
         if segue.identifier == "editFert" {
-            let nextVC = segue.destination as! AddFertilizationViewController
+            let nextVC = segue.destination as! iPadAddFertilizationVC
             nextVC.fielDID = fertID
             nextVC.fertUID = fertUID
             nextVC.fertFID = fertFID

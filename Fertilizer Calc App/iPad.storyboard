@@ -51,11 +51,11 @@
                                 <rect key="frame" x="20" y="261" width="780" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="242" id="qZf-WD-9Zr" customClass="iPadFieldsManagerTVCELL" customModule="Fertilizer_Calc_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="780" height="242"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="250" id="qZf-WD-9Zr" customClass="iPadFieldsManagerTVCELL" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="780" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qZf-WD-9Zr" id="cg4-Ox-00W">
-                                            <rect key="frame" x="0.0" y="0.0" width="780" height="242"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="780" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZD-RH-2zT">
@@ -64,7 +64,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="KDX-yn-OWi"/>
                                                         <constraint firstAttribute="width" constant="748" id="edr-qn-Whv"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -109,7 +109,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8e4-1a-um0" customClass="HorizontalBarChartView" customModule="DGCharts">
-                                                    <rect key="frame" x="16" y="80" width="748" height="162"/>
+                                                    <rect key="frame" x="16" y="80" width="748" height="170"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
                                             </subviews>
@@ -256,13 +256,132 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="2AO-H0-Ixd">
-                                        <rect key="frame" x="0.0" y="50" width="664" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="2AO-H0-Ixd" customClass="iPadFdTvCell" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="664" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2AO-H0-Ixd" id="cQw-zs-nn2">
-                                            <rect key="frame" x="0.0" y="0.0" width="664" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="664" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjS-68-GRN">
+                                                    <rect key="frame" x="16" y="25" width="70" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="pED-d8-eNG"/>
+                                                        <constraint firstAttribute="height" constant="50" id="zGV-SU-8LB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5lT-Gn-xHM">
+                                                    <rect key="frame" x="110" y="12" width="70" height="76"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2K-kT-PvQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="70" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="h7e-82-Vjg"/>
+                                                                <constraint firstAttribute="width" constant="70" id="wlg-yP-FYM"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                            <color key="textColor" systemColor="systemBlueColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgh-jr-ydX">
+                                                            <rect key="frame" x="0.0" y="28" width="70" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="70" id="AEm-fq-dzE"/>
+                                                                <constraint firstAttribute="height" constant="20" id="Bpy-Y8-0fZ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                            <color key="textColor" systemColor="systemPinkColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GY8-al-l4j">
+                                                            <rect key="frame" x="0.0" y="56" width="70" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="cGk-0i-nfM"/>
+                                                                <constraint firstAttribute="width" constant="70" id="voR-95-qHu"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                            <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="76" id="ASF-IS-m5A"/>
+                                                        <constraint firstAttribute="width" constant="70" id="eBp-iN-c2o"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="djI-lc-JL0" customClass="BarChartView" customModule="DGCharts">
+                                                    <rect key="frame" x="320" y="11" width="288" height="78"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VEp-t4-Z1r">
+                                                    <rect key="frame" x="198" y="12" width="90" height="76"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHZ-kr-cq7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="90" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="90" id="4gx-TP-x6k"/>
+                                                                <constraint firstAttribute="height" constant="20" id="ebf-1N-hBj"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                            <color key="textColor" systemColor="systemOrangeColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f47-d6-UCU">
+                                                            <rect key="frame" x="0.0" y="28" width="90" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="0Tk-e6-iyD"/>
+                                                                <constraint firstAttribute="width" constant="90" id="PMB-qh-Tj7"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VK2-Do-dEE">
+                                                            <rect key="frame" x="0.0" y="56" width="90" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="90" id="6Lr-am-gbZ"/>
+                                                                <constraint firstAttribute="height" constant="20" id="Gav-Ue-tqW"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="76" id="6X2-Mz-mIg"/>
+                                                        <constraint firstAttribute="width" constant="90" id="lNK-54-slJ"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VEp-t4-Z1r" secondAttribute="bottom" constant="1" id="05j-Q1-6xv"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5lT-Gn-xHM" secondAttribute="bottom" constant="1" id="1Ek-Yf-9XN"/>
+                                                <constraint firstItem="djI-lc-JL0" firstAttribute="leading" secondItem="VEp-t4-Z1r" secondAttribute="trailing" constant="32" id="K4o-bZ-Ecs"/>
+                                                <constraint firstItem="djI-lc-JL0" firstAttribute="bottom" secondItem="cQw-zs-nn2" secondAttribute="bottomMargin" id="KwF-fP-mYq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wjS-68-GRN" secondAttribute="bottom" constant="14" id="LUM-fx-IGl"/>
+                                                <constraint firstItem="VEp-t4-Z1r" firstAttribute="leading" secondItem="5lT-Gn-xHM" secondAttribute="trailing" constant="18" id="bQP-sa-xDw"/>
+                                                <constraint firstItem="5lT-Gn-xHM" firstAttribute="top" secondItem="cQw-zs-nn2" secondAttribute="topMargin" constant="1" id="g2U-du-cSs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="djI-lc-JL0" secondAttribute="trailing" constant="40" id="gsx-PG-8y4"/>
+                                                <constraint firstItem="5lT-Gn-xHM" firstAttribute="leading" secondItem="wjS-68-GRN" secondAttribute="trailing" constant="24" id="iCF-Hd-hY0"/>
+                                                <constraint firstItem="djI-lc-JL0" firstAttribute="top" secondItem="cQw-zs-nn2" secondAttribute="topMargin" id="ji1-HX-hgI"/>
+                                                <constraint firstItem="VEp-t4-Z1r" firstAttribute="top" secondItem="cQw-zs-nn2" secondAttribute="topMargin" constant="1" id="mNE-li-sXM"/>
+                                                <constraint firstItem="wjS-68-GRN" firstAttribute="leading" secondItem="cQw-zs-nn2" secondAttribute="leadingMargin" id="uiw-JV-93W"/>
+                                                <constraint firstItem="wjS-68-GRN" firstAttribute="top" secondItem="cQw-zs-nn2" secondAttribute="topMargin" constant="14" id="wx1-uk-0cC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="calciuLabel" destination="f47-d6-UCU" id="5bf-ZD-FeL"/>
+                                            <outlet property="chartView" destination="djI-lc-JL0" id="D9H-CG-NfU"/>
+                                            <outlet property="dateLabel" destination="wjS-68-GRN" id="1hO-Kq-aEg"/>
+                                            <outlet property="magnesiumLabel" destination="rHZ-kr-cq7" id="TPi-zM-JFh"/>
+                                            <outlet property="nitrogenLabel" destination="d2K-kT-PvQ" id="cW2-Po-r9G"/>
+                                            <outlet property="phosphorusLabel" destination="zgh-jr-ydX" id="JKU-Nw-7DY"/>
+                                            <outlet property="potassiumLabel" destination="GY8-al-l4j" id="CVu-6v-e3m"/>
+                                            <outlet property="quantityLabel" destination="VK2-Do-dEE" id="gFw-hG-hTA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -314,11 +433,301 @@
                         <outlet property="resultLabel" destination="gbN-Bo-XbS" id="4d0-oL-FN3"/>
                         <outlet property="table" destination="Pat-6W-9vl" id="lqC-EU-cx4"/>
                         <segue destination="hCR-mV-Idw" kind="show" identifier="newFert" id="oNg-TR-xTg"/>
+                        <segue destination="QJn-I2-5iR" kind="show" identifier="editFieldSettings" id="fFY-ox-Eui"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WmB-83-X5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1175.8536585365853" y="510"/>
+        </scene>
+        <!--iPad Field SettingsVC-->
+        <scene sceneID="uJr-k8-d0v">
+            <objects>
+                <viewController id="QJn-I2-5iR" customClass="iPadFieldSettingsVC" customModule="Fertilizer_Calc_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wH6-ie-bBe">
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf9-fF-XEZ">
+                                <rect key="frame" x="20" y="20" width="371" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="371" id="ijs-y1-NEp"/>
+                                    <constraint firstAttribute="height" constant="45" id="nLf-IJ-oQX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPR-5R-AXJ">
+                                <rect key="frame" x="584" y="28" width="99" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="8av-DV-fWF"/>
+                                    <constraint firstAttribute="width" constant="99" id="ga4-4z-z1f"/>
+                                </constraints>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Area Ha">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="areaButtonTapped:" destination="QJn-I2-5iR" eventType="touchUpInside" id="fOC-3s-Fqw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fertilization Limit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw6-YA-oLk">
+                                <rect key="frame" x="102" y="147" width="269" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P25-et-yDA" customClass="RoundLabel" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="102" y="212" width="500" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ij6-Gu-Exh" customClass="RoundLabel" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="102" y="270" width="500" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRe-3c-ICx" customClass="RoundLabel" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="102" y="328" width="500" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-y9-BrM" customClass="RoundLabel" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="102" y="386" width="500" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjA-tP-qff" customClass="RoundLabel" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="102" y="444" width="500" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXU-2p-aDh" customClass="RoundLabel" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="102" y="502" width="500" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sunrise.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rdJ-ad-NbE">
+                                <rect key="frame" x="102" y="212" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="n.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="opY-3B-c1w">
+                                <rect key="frame" x="102" y="270" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MQI-ho-bZr">
+                                <rect key="frame" x="102" y="328" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="k.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MCj-Su-76e">
+                                <rect key="frame" x="102" y="386" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-mg-yellow" translatesAutoresizingMaskIntoConstraints="NO" id="J8n-Rj-C8k">
+                                <rect key="frame" x="105" y="447" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-ca-grey" translatesAutoresizingMaskIntoConstraints="NO" id="PQG-Ul-y9C">
+                                <rect key="frame" x="105" y="505" width="45" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaw-Tz-Nsj" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="160" y="220" width="416" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77617693200249438" green="1" blue="0.77152480868823547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Growing">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="growingButtonTapped:" destination="QJn-I2-5iR" eventType="touchUpInside" id="HFA-jO-GNE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeA-Qf-tab" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="160" y="278" width="416" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.65218216756793512" green="0.88742211226291978" blue="0.94328010082244873" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Nitrogen">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nitrogenButtonTapped:" destination="QJn-I2-5iR" eventType="touchUpInside" id="ysA-13-MM9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABn-fe-Q2d" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="160" y="336" width="416" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94328010082244873" green="0.72054576477320598" blue="0.68590098577243974" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Phosphorus">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="phosphorusButtonTaped:" destination="QJn-I2-5iR" eventType="touchUpInside" id="Rou-lU-9hX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvQ-Bf-1a2" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="160" y="394" width="416" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71885268030000005" green="0.99755531549999998" blue="0.77996432100000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Potassium">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="potassiumButtontapped:" destination="QJn-I2-5iR" eventType="touchUpInside" id="0ct-Px-nmF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffJ-G5-U1C" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="160" y="452" width="416" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99755531549999998" green="0.96029042144018972" blue="0.49232096401173975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Magnesium">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="magnesiumLimitTapped:" destination="QJn-I2-5iR" eventType="touchUpInside" id="S1A-Qq-Rj5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkV-t6-lRG" customClass="RoundButton" customModule="Fertilizer_Calc_App" customModuleProvider="target">
+                                <rect key="frame" x="160" y="510" width="416" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Calcium">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="calciumLimitTapped:" destination="QJn-I2-5iR" eventType="touchUpInside" id="uep-MZ-fXG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YDj-jn-Msm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cf9-fF-XEZ" firstAttribute="top" secondItem="YDj-jn-Msm" secondAttribute="top" constant="20" id="3OF-rb-c7k"/>
+                            <constraint firstItem="EPR-5R-AXJ" firstAttribute="top" secondItem="YDj-jn-Msm" secondAttribute="top" constant="28" id="DKJ-bN-ZfA"/>
+                            <constraint firstItem="cf9-fF-XEZ" firstAttribute="leading" secondItem="YDj-jn-Msm" secondAttribute="leading" constant="20" id="GKJ-Xo-2NO"/>
+                            <constraint firstItem="YDj-jn-Msm" firstAttribute="trailing" secondItem="EPR-5R-AXJ" secondAttribute="trailing" constant="21" id="ie5-OT-agn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5J7-z0-ZSU"/>
+                    <connections>
+                        <outlet property="area" destination="EPR-5R-AXJ" id="x6J-jM-Uif"/>
+                        <outlet property="calciumLimit" destination="nkV-t6-lRG" id="4XO-5C-DAM"/>
+                        <outlet property="fieldNameArea" destination="cf9-fF-XEZ" id="YfK-Gt-HDY"/>
+                        <outlet property="growing" destination="oaw-Tz-Nsj" id="apU-d8-wmQ"/>
+                        <outlet property="magnesiumLimit" destination="ffJ-G5-U1C" id="Osg-gV-sCC"/>
+                        <outlet property="nitrogenLimit" destination="yeA-Qf-tab" id="Zoz-Lo-OqN"/>
+                        <outlet property="phosphorusLimit" destination="ABn-fe-Q2d" id="0CQ-28-fuQ"/>
+                        <outlet property="potassiumLimit" destination="XvQ-Bf-1a2" id="72K-fM-brT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bw-bg-YqD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175.8536585365853" y="1353.5593220338983"/>
         </scene>
         <!--iPad Add FertilizationVC-->
         <scene sceneID="zkb-KM-RmQ">
@@ -338,53 +747,137 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nitrogen" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58s-MA-5Zn">
-                                <rect key="frame" x="75" y="147" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phosphorus" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NbO-tn-kdN">
-                                <rect key="frame" x="290" y="147" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Potassium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CbI-kF-JEg">
-                                <rect key="frame" x="505" y="147" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Magnesium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNM-8c-25d">
-                                <rect key="frame" x="158" y="228" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Calcium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4O-50-061">
-                                <rect key="frame" x="408" y="228" width="125" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="nXa-BK-CsH">
-                                <rect key="frame" x="145" y="311" width="150" height="50"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="90" translatesAutoresizingMaskIntoConstraints="NO" id="VoB-ww-lgx">
+                                <rect key="frame" x="74.5" y="147" width="555" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nitrogen" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="58s-MA-5Zn">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Dcb-BB-u1H"/>
+                                            <constraint firstAttribute="width" constant="125" id="P90-SV-epy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phosphorus" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NbO-tn-kdN">
+                                        <rect key="frame" x="215" y="0.0" width="125" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="EeT-aY-slF"/>
+                                            <constraint firstAttribute="height" constant="30" id="LTR-pI-hfi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Potassium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CbI-kF-JEg">
+                                        <rect key="frame" x="430" y="0.0" width="125" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="M4e-Wr-a5h"/>
+                                            <constraint firstAttribute="height" constant="30" id="yfb-sn-p6y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XVb-m4-DOd"/>
+                                    <constraint firstAttribute="width" constant="555" id="Z4T-Pm-OAX"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="2Wm-96-ezX">
+                                <rect key="frame" x="164.5" y="228" width="375" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Magnesium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNM-8c-25d">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dwr-Fn-mXh"/>
+                                            <constraint firstAttribute="width" constant="125" id="zkr-4p-tas"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Calcium" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4O-50-061">
+                                        <rect key="frame" x="250" y="0.0" width="125" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="125" id="VHL-Xg-8ZC"/>
+                                            <constraint firstAttribute="height" constant="30" id="c4N-2V-7bo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9ap-er-QHy"/>
+                                    <constraint firstAttribute="width" constant="375" id="lm1-mB-hGC"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="E4E-iC-wHF">
+                                <rect key="frame" x="179.5" y="311" width="345" height="30"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="nXa-BK-CsH">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="SY2-ja-LmB"/>
+                                            <constraint firstAttribute="width" constant="150" id="UWy-HL-tPg"/>
+                                        </constraints>
+                                    </datePicker>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Quantity Kg/Ha" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j6f-q2-nNb">
+                                        <rect key="frame" x="220" y="0.0" width="125" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cb1-qU-425"/>
+                                            <constraint firstAttribute="width" constant="125" id="nWU-rq-Q7M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="2IK-ng-nza"/>
+                                    <constraint firstAttribute="height" constant="30" id="bGI-WR-MIB"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPN-Aa-8XJ">
+                                <rect key="frame" x="337" y="412" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="3dn-Ub-k8m"/>
+                                    <constraint firstAttribute="height" constant="30" id="Bb2-fd-qT0"/>
+                                </constraints>
+                                <color key="tintColor" red="0.20932926839999999" green="0.99755531549999998" blue="0.57030723449999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="checkmark.seal.fill" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="hCR-mV-Idw" eventType="touchUpInside" id="e50-WY-H0s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Glf-34-51T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="sPN-Aa-8XJ" firstAttribute="top" secondItem="E4E-iC-wHF" secondAttribute="bottom" constant="71" id="0nA-Wr-nKY"/>
                             <constraint firstItem="TeS-Fe-KbO" firstAttribute="top" secondItem="Glf-34-51T" secondAttribute="top" constant="20" id="9EK-4N-KYo"/>
+                            <constraint firstItem="E4E-iC-wHF" firstAttribute="centerX" secondItem="WfQ-a9-6Lw" secondAttribute="centerX" id="LQ2-Lj-a2m"/>
+                            <constraint firstItem="VoB-ww-lgx" firstAttribute="top" secondItem="TeS-Fe-KbO" secondAttribute="bottom" constant="82" id="N03-nI-LAl"/>
+                            <constraint firstItem="2Wm-96-ezX" firstAttribute="centerX" secondItem="WfQ-a9-6Lw" secondAttribute="centerX" id="Wju-Ca-IBd"/>
+                            <constraint firstItem="E4E-iC-wHF" firstAttribute="top" secondItem="2Wm-96-ezX" secondAttribute="bottom" constant="53" id="bzV-4p-UrW"/>
+                            <constraint firstItem="VoB-ww-lgx" firstAttribute="centerX" secondItem="WfQ-a9-6Lw" secondAttribute="centerX" id="dKT-9N-mwn"/>
                             <constraint firstItem="TeS-Fe-KbO" firstAttribute="leading" secondItem="Glf-34-51T" secondAttribute="leading" constant="20" id="ich-cl-3FH"/>
+                            <constraint firstItem="2Wm-96-ezX" firstAttribute="top" secondItem="VoB-ww-lgx" secondAttribute="bottom" constant="51" id="juw-f7-AJd"/>
+                            <constraint firstItem="sPN-Aa-8XJ" firstAttribute="centerX" secondItem="WfQ-a9-6Lw" secondAttribute="centerX" id="zD6-Lw-BLQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NSB-Ck-KRl"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="claciumLabel" destination="e4O-50-061" id="ZGv-6C-XWU"/>
+                        <outlet property="datePicker" destination="nXa-BK-CsH" id="sDs-9z-czT"/>
                         <outlet property="fieldNAME" destination="TeS-Fe-KbO" id="dRN-gn-qPF"/>
+                        <outlet property="magnesiumLabel" destination="bNM-8c-25d" id="98g-n7-FKh"/>
+                        <outlet property="nitrogenLabel" destination="58s-MA-5Zn" id="xcC-YO-Net"/>
+                        <outlet property="phosphorusLabel" destination="NbO-tn-kdN" id="rYZ-T1-Y0K"/>
+                        <outlet property="potassiumLabel" destination="CbI-kF-JEg" id="w99-lS-tcY"/>
+                        <outlet property="quantityLabel" destination="j6f-q2-nNb" id="7CT-3J-ua0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhZ-6C-51g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1119,13 +1612,37 @@
         <designable name="8mE-9O-Ll9">
             <size key="intrinsicContentSize" width="30" height="66"/>
         </designable>
+        <designable name="ABn-fe-Q2d">
+            <size key="intrinsicContentSize" width="132.5" height="38"/>
+        </designable>
         <designable name="Cq6-NY-ipu"/>
+        <designable name="Ij6-Gu-Exh"/>
+        <designable name="MRe-3c-ICx"/>
+        <designable name="P25-et-yDA"/>
         <designable name="QkV-dv-qi5">
             <size key="intrinsicContentSize" width="30" height="66"/>
         </designable>
+        <designable name="QqA-y9-BrM"/>
+        <designable name="XvQ-Bf-1a2">
+            <size key="intrinsicContentSize" width="118" height="38"/>
+        </designable>
         <designable name="bCd-u9-oTR"/>
+        <designable name="bjA-tP-qff"/>
         <designable name="chx-a2-ZLu">
             <size key="intrinsicContentSize" width="30" height="66"/>
+        </designable>
+        <designable name="ffJ-G5-U1C">
+            <size key="intrinsicContentSize" width="129" height="38"/>
+        </designable>
+        <designable name="nkV-t6-lRG">
+            <size key="intrinsicContentSize" width="97" height="38"/>
+        </designable>
+        <designable name="oaw-Tz-Nsj">
+            <size key="intrinsicContentSize" width="99.5" height="38"/>
+        </designable>
+        <designable name="uXU-2p-aDh"/>
+        <designable name="yeA-Qf-tab">
+            <size key="intrinsicContentSize" width="102.5" height="38"/>
         </designable>
         <designable name="ywJ-oo-HEU">
             <size key="intrinsicContentSize" width="30" height="66"/>
@@ -1134,25 +1651,47 @@
     </designables>
     <resources>
         <image name="calculator" width="25" height="25"/>
+        <image name="checkmark.seal.fill" catalog="system" width="128" height="124"/>
         <image name="delete.backward.fill" catalog="system" width="128" height="102"/>
         <image name="doc.badge.gearshape.fill" catalog="system" width="120" height="128"/>
+        <image name="k.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="letter-ca-grey" width="512" height="512"/>
+        <image name="letter-mg-yellow" width="512" height="512"/>
+        <image name="n.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="p.circle.fill" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.app.fill" catalog="system" width="128" height="114"/>
         <image name="servers" width="25" height="25"/>
+        <image name="sunrise.fill" catalog="system" width="128" height="97"/>
         <namedColor name="AccentColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGray5Color">
-            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
