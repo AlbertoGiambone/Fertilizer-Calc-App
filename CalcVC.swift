@@ -104,7 +104,16 @@ class CalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPi
         table.dataSource = self
     }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
+        
+        var FT = UserDefaults.standard.object(forKey: "FTime") as? String ?? "first"
+
+        if FT == "first" {
+            firstTime()
+            print("IT'S FIRST TIME!")
+        }
         
         USER_ID = UserDefaults.standard.object(forKey: "userInfo") as? String ?? ""
         
@@ -171,6 +180,51 @@ class CalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPi
             KGbutton.titleLabel?.adjustsFontSizeToFitWidth = true
             KGbutton.titleLabel?.numberOfLines = 1
     }
+    
+    //MARK: Show PayWall 1 time opened
+    
+    func firstTime() {
+        
+        UserDefaults.standard.setValue("second", forKey: "FTime")
+        
+        var sub: Bool?
+        
+        Task { @MainActor in
+            do { let shared = try await AppTransaction.shared
+                
+                if case .verified(let appTransaction) = shared {
+                    let newBusinessModel = "1"
+                    
+                    let VersionComponents = appTransaction.originalAppVersion.split(separator: ".")
+                    
+                    let FirstVersionComponent = VersionComponents[0]
+                    if FirstVersionComponent < newBusinessModel {
+                        
+                        
+                        print("Already Purchased!")
+                        
+                    }else{
+                        print("Going to PayWALL!")
+                        Purchases.shared.getCustomerInfo{ (customerInfo, error) in
+                            if customerInfo?.entitlements[Costants.entitlementID]?.isActive == true {
+                                print("User with Active Sub...")
+                                sub = true
+                            }else{
+                                let nextVC = self.navigationController?.storyboard?.instantiateViewController(withIdentifier: "paywall") as! PayWall
+                                nextVC.modalPresentationStyle = .automatic
+                                nextVC.dismissing = true
+                                self.navigationController?.pushViewController(nextVC, animated: true)
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    
     
     
     //MARK: TableView func
@@ -973,7 +1027,8 @@ class CalcVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPi
     }
     
     
-    
+
+
 
 }
 

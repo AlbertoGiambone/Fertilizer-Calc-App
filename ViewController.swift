@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreData
 import Firebase
 import AVFoundation
 import Network
@@ -30,7 +29,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     
     
-    //MARK: functinality
+    //MARK: functionality
     
     let db = Firestore.firestore()
     
@@ -145,13 +144,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .darkGray
         self.tabBarController?.tabBar.barTintColor = .white
-        /*
-        if traitCollection.userInterfaceStyle == .dark {
-            VCTitle.textColor = .white
-        }else{
-            VCTitle.textColor = .black
-        }
-        */
+    
         
         //MARK: unit
         
@@ -166,7 +159,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             do { let shared = try await AppTransaction.shared
                 
                 if case .verified(let appTransaction) = shared {
-                    let newBusinessModel = "2"
+                    let newBusinessModel = "1"
                     
                     let VersionComponents = appTransaction.originalAppVersion.split(separator: ".")
                     
@@ -177,7 +170,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         print("Already Purchased!")
                         
                     }else{
-      
+                        print("Going to PayWALL!")
                         Purchases.shared.getCustomerInfo{ (customerInfo, error) in
                             if customerInfo?.entitlements[Costants.entitlementID]?.isActive == true {
                                 print("User with Active Sub...")
@@ -415,27 +408,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             chartDataEntry.append(value)
         }
         
-        let chartDSet = BarChartDataSet(entries: chartDataEntry)
-        chartDSet.colors = ChartColorTemplates.colorful()
-        chartDSet.stackLabels = ["N", "P", "K", "Mg", "Ca"]
-        cell.chartView.leftAxis.drawGridLinesEnabled = false
-        cell.chartView.rightAxis.drawGridLinesEnabled = false
-        cell.chartView.xAxis.drawGridLinesEnabled = false
-        cell.chartView.leftAxis.enabled = false
-        cell.chartView.rightAxis.enabled = false
-        cell.chartView.legend.enabled = false
-        cell.chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: xValue)
-        cell.chartView.xAxis.labelCount = xValue.count
-        cell.chartView.xAxis.labelFont = .boldSystemFont(ofSize: 15)
-        cell.chartView.xAxis.labelPosition = .bottom
         
-        let BCD = BarChartData(dataSet: chartDSet)
-        cell.chartView.data = BCD
-        cell.chartView.drawGridBackgroundEnabled = false
-        cell.chartView.isUserInteractionEnabled = false
-        cell.chartView.animate(xAxisDuration: 1, yAxisDuration: 1)
-        //Set lineChart for Fertilization Limit
-        /*
+        //Set Data for Fertilization Limit
+        
         let nLimit = Double(whole[indexPath.row].nitrogenLimit) ?? 0
         let pLimit = Double(whole[indexPath.row].phosphorusLimit) ?? 0
         let kLimit = Double(whole[indexPath.row].potassiumLimit) ?? 0
@@ -446,11 +421,52 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let yVals = [nLimit, pLimit, kLimit, mgLimit, caLimit]
         
+        /*
         for i in 0..<yVals.count {
-                let val1 = (Double) (arc4random_uniform(2000))
-            yVals1.append(ChartDataEntry(x: val1, y: Double(i)))
+            let value = BarChartDataEntry(x: Double(i), y: yValue[Int(i)])
+            yVals1.append(value)
+            print(value)
         }
-         */
+        */
+        
+        for i in 0..<yVals.count {
+            let value = BarChartDataEntry(x: Double(i), y: yVals[Int(i)])
+            yVals1.append(value)
+        }
+            
+        
+        let chartDSet = BarChartDataSet(entries: chartDataEntry)
+        chartDSet.colors = [UIColor(red: 64/255, green: 160/255, blue: 64/255, alpha: 1), UIColor(red: 64/255, green: 160/255, blue: 64/255, alpha: 1)]
+        chartDSet.stackLabels = ["N", "P", "K", "Mg", "Ca"]
+        let limitBarChart = BarChartDataSet(entries: yVals1)
+        limitBarChart.colors = [UIColor(red: 64/255, green: 160/255, blue: 64/255, alpha: 0.2), UIColor(red: 64/255, green: 160/255, blue: 64/255, alpha: 0.2)]
+        
+        let BCD = BarChartData(dataSets: [chartDSet, limitBarChart])
+        //let chartData = BarChartData(dataSets: BCD)
+        cell.chartView.data = BCD
+        
+        //let groupSpace = 0.25
+        //let barSpace = 0.05
+        
+        //cell.chartView.groupBars(fromX: 0.0, groupSpace: groupSpace, barSpace: barSpace)
+        
+        cell.chartView.leftAxis.drawGridLinesEnabled = false
+        cell.chartView.rightAxis.drawGridLinesEnabled = false
+        cell.chartView.xAxis.drawGridLinesEnabled = false
+        cell.chartView.leftAxis.enabled = false
+        cell.chartView.rightAxis.enabled = false
+        cell.chartView.legend.enabled = false
+        cell.chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values: xValue)
+        cell.chartView.xAxis.labelCount = xValue.count
+        cell.chartView.xAxis.labelFont = .boldSystemFont(ofSize: 15)
+        cell.chartView.xAxis.labelPosition = .bottom
+    
+        //let BCD = BarChartData(dataSet: chartDSet)
+        
+        cell.chartView.drawGridBackgroundEnabled = false
+        cell.chartView.isUserInteractionEnabled = false
+        cell.chartView.animate(xAxisDuration: 1, yAxisDuration: 1)
+        
         return cell
     }
     
